@@ -3,6 +3,7 @@ import numpy as np
 import random
 import pickle
 
+#Setup data needs explaining
 column_names = ["Driver", "Avg_Pos", "Pos_SDV", "Ret"]
 data = pd.read_csv("2020.csv", names=column_names)
 Driver = data.Driver.to_list()
@@ -10,7 +11,6 @@ Avg_Pos = data.Avg_Pos.to_list()
 Pos_SDV = data.Pos_SDV.to_list()
 Ret = data.Ret.to_list()
 fullData = [Driver] + [Avg_Pos] + [Pos_SDV] + [Ret]
-
 points = {0: 25, 1: 18, 2: 15, 3: 12, 4: 10, 5: 8, 6: 6, 7: 4, 8: 2, 9: 1}
 
 def retirementTest(avg_ret):
